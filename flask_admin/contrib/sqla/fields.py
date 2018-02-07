@@ -296,5 +296,5 @@ class InlineModelFormList(InlineFieldList):
 
 def get_pk_from_identity(obj):
     # TODO: Remove me
-    key = identity_key(instance=obj)[1]
+    cls, key, _ = identity_key(instance=obj)[1]
     return u':'.join(text_type(x) for x in key)
